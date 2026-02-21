@@ -119,7 +119,7 @@ class AudioCNNModel:
        x = MaxPooling2D(pool_size=(2, 2))(x)
          
        x = Flatten()(x)
-       x = outputs = Dense(128, activation='relu')(x)
+       x = Dense(128, activation='relu')(x)
          
        x = Dropout(0.3)(x)
        outputs = Dense(self.num_classes, activation='softmax')(x)
